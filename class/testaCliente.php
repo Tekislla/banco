@@ -6,7 +6,7 @@
  * Time: 16:19
  */
 
-require "classes/cliente.php";
+require "classes/Cliente.php";
 
 $clienteJunior = new cliente();
 $clienteJunior->setNome("João Pedro Lazarim de Souza");

@@ -7,7 +7,7 @@
  */
 
 
-require 'classes/conta.php';
+require 'classes/Conta.php';
 
 $minhaConta = new conta();
 $minhaConta -> dono = "João Pedro Lazarim";

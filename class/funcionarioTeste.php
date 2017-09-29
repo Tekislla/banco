@@ -1,21 +1,20 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: aluno
- * Date: 27/09/17
- * Time: 16:06
- */
 
-require "classes/funcionario.php";
+    require "classes/Funcionario.php";
+    require_once "classes/Data.php";
 
-$funcionario = new funcionario();
-$funcionario-> departamento = "compras";
-$funcionario-> salario = 1000;
-$funcionario-> dataEntrada = "agosto";
-$funcionario-> setCpf("09343317905");
-$funcionario-> recebeAumento(200);
-$funcionario-> calculaGanhoAnual();
+    $dataEntrada = new Data();
+    $dataEntrada-> dia = 10;
+    $dataEntrada-> mes = 8;
+    $dataEntrada-> ano = 2000;
 
-echo "O salário anual do funcionário é de {$funcionario->salarioAnual}\n";
+    $funcionario = new funcionario();
+    $funcionario-> departamento = "compras";
+    $funcionario-> salario = 1000;
+    $funcionario-> setDataEntrada($dataEntrada);
+    $funcionario-> setCpf("09343317905");
+    $funcionario-> recebeAumento(0.2);
+    $funcionario-> calculaGanhoAnual();
+    $funcionario-> mostra();
 
-print_r($funcionario);
+    print_r($funcionario);
