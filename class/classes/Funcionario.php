@@ -2,11 +2,38 @@
 
 class Funcionario
 {
-    public $departamento;
-    public $salario;
+    private $nome;
+    private $departamento;
+    private $salario;
     private $cpf;
     private $dataEntrada;
     const SALARIO_DECIMO_TERCEIRO_E_FERIAS = 13.3;
+
+    function __construct(string $nomeInformado)
+    {
+        $this->nome = $nomeInformado;
+
+    }
+
+    public function getDepartamento()
+    {
+        return $this->departamento;
+    }
+
+    public function setDepartamento($departamento)
+    {
+        $this->departamento = $departamento;
+    }
+
+    public function getSalario()
+    {
+        return $this->salario;
+    }
+
+    public function setSalario($salario)
+    {
+        $this->salario = $salario;
+    }
 
     public function getCpf()
     {
@@ -47,5 +74,7 @@ class Funcionario
 
         echo "\n\n";
     }
+
+
 
 }

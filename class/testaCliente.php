@@ -21,3 +21,5 @@ $clienteSenior->cpf = "573.344.331-94";
 $clienteSenior->endereco = "Rua Corinthians";
 
 print_r($clienteSenior);
+
+

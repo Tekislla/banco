@@ -10,7 +10,12 @@ class conta
 {
     public $numero;
     public $dono;
-    private $saldo;
+    private $saldo = 0;
+    public static $totalContas = 0;
+
+  function __construct() {
+      self::$totalContas++;
+  }
 
     public function getSaldo(): float
     {
@@ -26,7 +31,7 @@ class conta
         }
     }
 
-    public function deposita(float $valor) :void{
+    public function deposita(float $valor) {
         if ($valor > 0) {
             $this->saldo += $valor;
         }

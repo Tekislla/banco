@@ -12,6 +12,13 @@ class cliente
     public $cpf;
     public $endereco;
 
+    function __construct(string $nome, string $cpf) {
+
+        $this->nome = $nome;
+        $this->cpf = $cpf;
+
+    }
+
     public function getNome() {
         return $this->nome;
     }
