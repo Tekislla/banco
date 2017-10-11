@@ -6,7 +6,7 @@
  * Time: 16:09
  */
 
-require_once "classes/lutador.php";
+require_once "classes/Lutador.php";
 
 $saitama = new lutador("Saitama", 23, 78, 50, 0);
 $saitama->ganhaLuta(3);

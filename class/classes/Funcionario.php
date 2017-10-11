@@ -3,8 +3,8 @@
 class Funcionario
 {
     private $nome;
-    private $departamento;
-    private $salario;
+    protected $departamento;
+    protected $salario;
     private $cpf;
     private $dataEntrada;
     const SALARIO_DECIMO_TERCEIRO_E_FERIAS = 13.3;
@@ -12,7 +12,11 @@ class Funcionario
     function __construct(string $nomeInformado)
     {
         $this->nome = $nomeInformado;
+    }
 
+    public function getBonificacao()
+    {
+        return $this->salario * 0.1;
     }
 
     public function getDepartamento()
