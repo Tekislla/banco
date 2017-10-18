@@ -16,7 +16,6 @@ class ControleBonificacoes
 
     public function mostra()
     {
-        echo "O total de bonificações pagas pelo banco foi de: " .
-            $this->getTotalPago();
+        echo "O total de bonificações pagas pelo banco foi de: {$this->getTotalPago()}.";
     }
 }

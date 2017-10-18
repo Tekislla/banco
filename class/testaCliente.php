@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: aluno
- * Date: 13/09/17
- * Time: 16:19
- */
 
 require "classes/Cliente.php";
 

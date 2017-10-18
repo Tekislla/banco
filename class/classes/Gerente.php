@@ -12,12 +12,14 @@ class Gerente extends Funcionario
         parent::__construct($nomeInformado);
     }
 
+    public function alteraNome()
+    {
+        $this->nome = "Nome Alterado";
+    }
+
     public function getBonificacao()
     {
         return parent::getBonificacao() + $this->salario * 0.05;
     }
 
 }
-
-
-$rodorlfo = new Gerente("Rodorlfo Chaves");

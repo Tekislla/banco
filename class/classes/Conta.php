@@ -1,28 +1,30 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: aluno
- * Date: 30/08/17
- * Time: 15:58
- */
 class conta
 {
     public $numero;
+    public $cpf;
     public $dono;
-    private $saldo = 0;
+    protected $saldo = 0;
     public static $totalContas = 0;
 
-  function __construct() {
-      self::$totalContas++;
-  }
+    function __construct()
+    {
+        self::$totalContas++;
+    }
+
+    public function atualiza(float $taxa)
+    {
+        $this->saldo += $this->saldo * $taxa;
+    }
 
     public function getSaldo(): float
     {
         return $this->saldo;
     }
 
-    public function saca(float $valor) :bool {
+    public function saca(float $valor) :bool
+    {
         if ($valor < $this->saldo) {
             $this->saldo = $this->saldo - $valor;
             return true;
@@ -31,14 +33,15 @@ class conta
         }
     }
 
-    public function deposita(float $valor) {
+    public function deposita(float $valor)
+    {
         if ($valor > 0) {
             $this->saldo += $valor;
         }
     }
 
-    public function transferePara(conta $contaDestino, float $valor){
-
+    public function transferePara(conta $contaDestino, float $valor)
+    {
         $deuCerto = $this->saca($valor);
 
         if ($deuCerto){

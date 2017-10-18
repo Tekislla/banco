@@ -9,6 +9,4 @@ require 'classes/Cliente.php';
  $contaPoupança = new Conta();
  $contaPoupança->deposita(15);
 
-
-
  echo "total de contas do banco: ". Conta::$totalContas;

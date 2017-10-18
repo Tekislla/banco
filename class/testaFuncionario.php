@@ -12,4 +12,9 @@
 
     $jorgin = new Gerente("Jorgin");
     $jorgin-> setSalario(3000);
+    $jorgin->setDataEntrada($dataEntrada);
     $jorgin->mostra();
+
+    $bonus = new ControleBonificacoes();
+    $bonus->registra($jorgin);
+    $bonus->mostra();

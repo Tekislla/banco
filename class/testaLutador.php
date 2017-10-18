@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: aluno
- * Date: 04/10/17
- * Time: 16:09
- */
 
 require_once "classes/Lutador.php";
 

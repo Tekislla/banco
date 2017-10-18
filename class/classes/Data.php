@@ -6,9 +6,8 @@ class Data
     public $mes;
     public $ano;
 
-    public function formatada() {
-
+    public function formatada()
+    {
         return "{$this->dia}/{$this->mes}/{$this->ano}";
-
     }
 }
