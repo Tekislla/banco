@@ -1,6 +1,6 @@
 <?php
 
-class Funcionario
+abstract class Funcionario
 {
     protected $nome;
     protected $departamento;
@@ -14,7 +14,7 @@ class Funcionario
         $this->nome = $nomeInformado;
     }
 
-    public function getBonificacao()
+    public abstract function getBonificacao()
     {
         return $this->salario * 0.1;
     }
@@ -68,9 +68,9 @@ class Funcionario
 
     public function mostra()
     {
-        echo "O funcionário {$this->getCpf()}, que se chama {$this->nome} trabalha no departamento {$this->departamento} e tem o salário de {$this->salario}.\n";
+        echo "O funcionário {$this->getCpf()}, que se chama {$this->nome} trabalha no departamento {$this->departamento} e tem o salário de {$this->salario} reais.\n";
 
-        echo "Seu ganho anual é de {$this->calculaGanhoAnual()}. \n";
+        echo "Seu ganho anual é de {$this->calculaGanhoAnual()} reais. \n";
 
         echo "Sua data de entrada foi {$this->dataEntrada->formatada()}.";
 

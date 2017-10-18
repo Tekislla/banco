@@ -11,6 +11,8 @@
     $dataEntrada-> ano = 2000;
 
     $jorgin = new Gerente("Jorgin");
+    $jorgin->setCpf("09343317905");
+    $jorgin->setDepartamento("Segurança");
     $jorgin-> setSalario(3000);
     $jorgin->setDataEntrada($dataEntrada);
     $jorgin->mostra();
